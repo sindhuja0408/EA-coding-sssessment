@@ -2,7 +2,7 @@ import { test, expect, APIResponse } from '@playwright/test';
 import { BASE_URL } from './constant/config';
 import { Festival, Band } from './constant/interfaces.ts';
 
-test('Verify nested JSON structure recursively', async ({ request }) => {
+test('Verify response data structure recursively', async ({ request }) => {
   const response: APIResponse = await request.get(BASE_URL);
   expect(response.status()).toBe(200);
 

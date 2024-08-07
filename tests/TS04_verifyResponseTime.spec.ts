@@ -1,7 +1,7 @@
 import { test, expect, APIRequestContext, APIResponse } from '@playwright/test';
 import { BASE_URL } from './constant/config';
 
-test('Verify response time for API', async ({ request }) => {
+test('Verify response time for an API request', async ({ request }) => {
   const maxExpectedResponseTime = 500;
   const { response, responseTime } = await measureResponseTime(request, BASE_URL);
   console.log('responseTime :>> ', responseTime);
